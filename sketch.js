@@ -1,5 +1,5 @@
 function setup() {
-  createCanvas(400, 200);
+  createCanvas(600, 300);
   makeGrid()
 }
 
