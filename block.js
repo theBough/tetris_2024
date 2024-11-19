@@ -6,6 +6,7 @@ function Block(x,y,w,h,col){
   this.col = col;
   
   this.display = function(){
+    fill(this.col)
     rect(this.x, this.y, this.w, this.h)
   }
   
