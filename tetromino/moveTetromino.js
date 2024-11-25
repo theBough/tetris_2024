@@ -2,7 +2,7 @@ function moveActiveTetromino(){
   
   for(let i = 0; i<activeTetromino.length;i++){
     activeTetromino[i] +=1
-    if(activeTetromino[i] % 20 == 0){
+    if(activeTetromino[i] % 20 == 19){
       hitEdge = true
     }
     grid[activeTetromino[i]-1].col = 100
@@ -10,8 +10,5 @@ function moveActiveTetromino(){
   }
   
     for(let i = 0; i<activeTetromino.length;i++){
-      activeTetromino[i] +=1
       grid[activeTetromino[i]].col = "pink"
-    }    
-
-}
+    }
