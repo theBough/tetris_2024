@@ -1,5 +1,5 @@
 function moveActiveTetromino(){
-  
+
   for(let i = 0; i<activeTetromino.length;i++){
     activeTetromino[i] +=1
     if(activeTetromino[i] % 20 == 19){
@@ -10,5 +10,7 @@ function moveActiveTetromino(){
   }
   
     for(let i = 0; i<activeTetromino.length;i++){
-      grid[activeTetromino[i]].col = "pink"
-    }
+      grid[activeTetromino[i]].col = activeColour;
+    }   
+
+}
