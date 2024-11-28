@@ -16,6 +16,13 @@ function moveActiveTetromino(){
 }
 function keyReleased(){
   if(key === 'w'){
+    for(let i = 0; i<activeTetromino.length;i++){
+     if(activeTetromino[i] < 20){
+       //we are on the edge, and cant move up
+       console.log("edge")
+       return 0;
+     }
+    }
     //move the tetromino up
    for(let i = 0; i<activeTetromino.length;i++){
      activeTetromino[i] -= 20
