@@ -36,4 +36,22 @@ function keyReleased(){
       grid[activeTetromino[i]].col = activeColour
     } 
   }
+  if(key === 'a'){
+    
+    //move the tetromino up
+   
+     activeTetromino[2] -= 39
+    activeTetromino[5] += 18
+    
+    //true the old spot grey
+    grid[activeTetromino[2]+39].col = 100
+    grid[activeTetromino[5]-18].col = 100
+    //colour new location of tetromino
+    for(let i = 0; i<activeTetromino.length;i++){
+      grid[activeTetromino[i]].col = activeColour
+    } 
+  }
+   if(key === 'q'){
+     hitEdge = true
+   }
 }
