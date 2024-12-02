@@ -37,21 +37,55 @@ function keyReleased(){
     } 
   }
   if(key === 'a'){
-    
-    //move the tetromino up
-   
-     activeTetromino[2] -= 39
-    activeTetromino[5] += 18
-    
-    //true the old spot grey
-    grid[activeTetromino[2]+39].col = 100
-    grid[activeTetromino[5]-18].col = 100
-    //colour new location of tetromino
-    for(let i = 0; i<activeTetromino.length;i++){
-      grid[activeTetromino[i]].col = activeColour
-    } 
+    if(activeColour == "rgb(192,255,255)"){
+      //move the tetromino up
+
+      activeTetromino[2] -= 39
+      activeTetromino[5] += 18
+
+      //true the old spot grey
+      grid[activeTetromino[2]+39].col = 100
+      grid[activeTetromino[5]-18].col = 100
+      //colour new location of tetromino
+      for(let i = 0; i<activeTetromino.length;i++){
+        grid[activeTetromino[i]].col = activeColour
+      } 
+    } else if(activeColour == "pink"){
+      activeTetromino[5] -= 42
+
+      //true the old spot grey
+      grid[activeTetromino[5]+42].col = 100
+      //colour new location of tetromino
+      for(let i = 0; i<activeTetromino.length;i++){
+        grid[activeTetromino[i]].col = activeColour
+      } 
+    }
+
   }
    if(key === 'q'){
-     hitEdge = true
+      if(activeColour == "rgb(192,255,255)"){
+        //move the tetromino up
+
+        activeTetromino[2] += 22
+        activeTetromino[5] -= 41
+
+        //true the old spot grey
+        grid[activeTetromino[2]-22].col = 100
+        grid[activeTetromino[5]+41].col = 100
+        //colour new location of tetromino
+        for(let i = 0; i<activeTetromino.length;i++){
+          grid[activeTetromino[i]].col = activeColour
+        }          
+       }
+      else if(activeColour == "pink"){
+        activeTetromino[5] -= 38
+
+        //true the old spot grey
+        grid[activeTetromino[5]+38].col = 100
+        //colour new location of tetromino
+        for(let i = 0; i<activeTetromino.length;i++){
+          grid[activeTetromino[i]].col = activeColour
+        } 
    }
+  }
 }
