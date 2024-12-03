@@ -38,7 +38,7 @@ function keyReleased(){
   }
   if(key === 'a'){
     if(activeColour == "rgb(192,255,255)"){
-      
+      //the Tophat
 
       activeTetromino[2] -= 39
       activeTetromino[5] += 18
