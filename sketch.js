@@ -3,6 +3,8 @@ let activeColour
 let activeTetromino = []
 let myGravity;
 let hitEdge = false;
+let nameOfActiveTetro;
+
 function setup() {
   createCanvas(600, 300);
   makeGrid()
@@ -16,8 +18,10 @@ function setup() {
   console.log(activeColour)
   if(index == 0){
     makeCross();
+    nameOfActiveTetro = "cross"
   } else if(index == 1){
     makeTophat()
+    nameOfActiveTetro = "topHat"
   }
 }
 function draw() {
@@ -26,12 +30,12 @@ function draw() {
     grid[i].display()
     
   }
-  
+ 
   if(hitEdge){
     clearInterval(myGravity);
   }
 }
 function gravityOn(){
-  //console.log("test")
+ 
   myGravity = setInterval(moveActiveTetromino,500)
 }
