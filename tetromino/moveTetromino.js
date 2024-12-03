@@ -38,7 +38,7 @@ function keyReleased(){
   }
   if(key === 'a'){
     if(activeColour == "rgb(192,255,255)"){
-      //move the tetromino up
+      
 
       activeTetromino[2] -= 39
       activeTetromino[5] += 18
@@ -89,3 +89,14 @@ function keyReleased(){
    }
   }
 }
+
+function whatTetromino(){
+  switch(nameOfActiveTetro){
+      case "topHat":
+        topHatState();
+      break;
+      case "cross":
+        crossState();
+      break;
+  }//end of switch
+}//end of function
