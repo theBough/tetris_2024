@@ -1,6 +1,6 @@
 let colourList = []
 let activeColour
-let activeHexamino = []
+let activeHexomino = []
 let myGravity;
 let hitEdge = false;
 let nameOfActiveHexo;
@@ -9,8 +9,8 @@ function setup() {
   createCanvas(600, 300);
   makeGrid()
   gravityOn()
-  colourList.push("pink")
-  colourList.push("rgb(192,255,255)")
+  colourList.push("#DA2C38")
+  colourList.push("#226F54")
   
   let index = Math.trunc(random(0,colourList.length))
   activeColour = colourList[index]
@@ -35,5 +35,5 @@ function draw() {
 }
 function gravityOn(){
  
-  myGravity = setInterval(moveActiveHexamino,500)
+  myGravity = setInterval(moveActiveHexomino,500)
 }
