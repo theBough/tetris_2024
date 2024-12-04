@@ -1,9 +1,9 @@
 let colourList = []
 let activeColour
-let activeTetromino = []
+let activeHexamino = []
 let myGravity;
 let hitEdge = false;
-let nameOfActiveTetro;
+let nameOfActiveHexo;
 
 function setup() {
   createCanvas(600, 300);
@@ -13,15 +13,13 @@ function setup() {
   colourList.push("rgb(192,255,255)")
   
   let index = Math.trunc(random(0,colourList.length))
-  console.log(index)
   activeColour = colourList[index]
-  console.log(activeColour)
   if(index == 0){
     makeCross();
-    nameOfActiveTetro = "cross"
+    nameOfActiveHexo = "cross"
   } else if(index == 1){
     makeTophat()
-    nameOfActiveTetro = "topHat"
+    nameOfActiveHexo = "topHat"
   }
 }
 function draw() {
@@ -37,5 +35,5 @@ function draw() {
 }
 function gravityOn(){
  
-  myGravity = setInterval(moveActiveTetromino,500)
+  myGravity = setInterval(moveActiveHexamino,500)
 }
