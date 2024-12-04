@@ -35,6 +35,26 @@ function keyReleased(){
       grid[activeHexamino[i]].col = activeColour
     } 
   }
+  if(key === 's'){
+    for(let i = 0; i<activeHexamino.length-1;i++){
+     if(activeHexamino[i] > 180){
+       //we are on the edge, and cant move down
+       return 0;
+     }
+    }
+    //move the tetromino down
+   for(let i = 0; i<activeHexamino.length-1;i++){
+     activeHexamino[i] += 20
+    }
+    //true the old spot grey
+    for(let i = 0; i<activeHexamino.length-1;i++){
+      grid[activeHexamino[i]-20].col = 100
+    }
+    //colour new location of tetromino
+    for(let i = 0; i<activeHexamino.length-1;i++){
+      grid[activeHexamino[i]].col = activeColour
+    }
+  }
   if(key === 'a'){
     if(activeColour =="#226F54"){
       //the Tophat
