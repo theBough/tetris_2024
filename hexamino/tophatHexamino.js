@@ -1,7 +1,7 @@
 function makeTophat(){
   activeHexamino = [81,82,100,101,102,103,0];
   for(let i = 0 ; i<activeHexamino.length-1; i++){
-    grid[activeHexamino[i]].col = "rgb(192,255,255)"
+    grid[activeHexamino[i]].col ="#226F54"
   }
 }
 
@@ -46,11 +46,11 @@ function moveOneToTwo(){
         activeHexamino[6] += 1000
         activeHexamino.sort(function(a,b){return a-b})
         activeHexamino[6] -= 1000
-        activeHexamino[0] += 41
-        activeHexamino[5] -= 22
+        activeHexamino[0] += 18
+        activeHexamino[5] -= 39
         //turn the old spot grey
-        grid[activeHexamino[0]-41].col = 100
-        grid[activeHexamino[5]+22].col = 100
+        grid[activeHexamino[0]-18].col = 100
+        grid[activeHexamino[5]+39].col = 100
         //colour new location of hexamino
         for(let i = 0; i<activeHexamino.length-1;i++){
           grid[activeHexamino[i]].col = activeColour
