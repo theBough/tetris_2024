@@ -1,7 +1,7 @@
 function makeTophat(){
-  activeHexamino = [81,82,100,101,102,103,0];
-  for(let i = 0 ; i<activeHexamino.length-1; i++){
-    grid[activeHexamino[i]].col ="#226F54"
+  activeHexomino = [81,82,100,101,102,103,0];
+  for(let i = 0 ; i<activeHexomino.length-1; i++){
+    grid[activeHexomino[i]].col ="#226F54"
   }
 }
 
@@ -10,49 +10,49 @@ function topHatState(){
   //top hat is in, and then rotate it.
   
   //index 6 tells us what state the tetromino is in
-  console.log(activeHexamino[6])
-  switch(activeHexamino[6]){
+  console.log(activeHexomino[6])
+  switch(activeHexomino[6]){
     case 0:
       moveZeroToOne();
-      activeHexamino[6] +=1
+      activeHexomino[6] +=1
     break;
     case 1:
       moveOneToTwo()
-      activeHexamino[6] +=1
+      activeHexomino[6] +=1
     break;  
     case "2":
-      activeHexamino[6] +=1
+      activeHexomino[6] +=1
     break;
     case "3":
-      activeHexamino[6] =0
+      activeHexomino[6] =0
     break;  
   }
 }
 function moveZeroToOne(){
         //rotate theTopHat from zero to one
-        activeHexamino[2] += 22
-        activeHexamino[5] -= 41
+        activeHexomino[2] += 22
+        activeHexomino[5] -= 41
         //turn the old spot grey
-        grid[activeHexamino[2]-22].col = 100
-        grid[activeHexamino[5]+41].col = 100
+        grid[activeHexomino[2]-22].col = 100
+        grid[activeHexomino[5]+41].col = 100
   
-        //colour new location of hexamino
-        for(let i = 0; i<activeHexamino.length-1;i++){
-          grid[activeHexamino[i]].col = activeColour
+        //colour new location of hexomino
+        for(let i = 0; i<activeHexomino.length-1;i++){
+          grid[activeHexomino[i]].col = activeColour
         }          
 }
 function moveOneToTwo(){
    //rotate theTopHat from zero to one
-        activeHexamino[6] += 1000
-        activeHexamino.sort(function(a,b){return a-b})
-        activeHexamino[6] -= 1000
-        activeHexamino[0] += 18
-        activeHexamino[5] -= 39
+        activeHexomino[6] += 1000
+        activeHexomino.sort(function(a,b){return a-b})
+        activeHexomino[6] -= 1000
+        activeHexomino[0] += 18
+        activeHexomino[5] -= 39
         //turn the old spot grey
-        grid[activeHexamino[0]-18].col = 100
-        grid[activeHexamino[5]+39].col = 100
-        //colour new location of hexamino
-        for(let i = 0; i<activeHexamino.length-1;i++){
-          grid[activeHexamino[i]].col = activeColour
+        grid[activeHexomino[0]-18].col = 100
+        grid[activeHexomino[5]+39].col = 100
+        //colour new location of hexomino
+        for(let i = 0; i<activeHexomino.length-1;i++){
+          grid[activeHexomino[i]].col = activeColour
         }          
 }
