@@ -27,8 +27,8 @@ function keyReleased(){
      activeHexamino[i] -= 20
     }
     //true the old spot grey
-    for(let i = 0; i<activeTetromino.length-1;i++){
-      grid[activeTetromino[i]+20].col = 100
+    for(let i = 0; i<activeHexamino.length-1;i++){
+      grid[activeHexamino[i]+20].col = 100
     } 
     //colour new location of tetromino
     for(let i = 0; i<activeHexamino.length-1;i++){
@@ -36,7 +36,7 @@ function keyReleased(){
     } 
   }
   if(key === 'a'){
-    if(activeColour == "rgb(192,255,255)"){
+    if(activeColour =="#226F54"){
       //the Tophat
 
       activeHexamino[2] -= 39
@@ -49,7 +49,7 @@ function keyReleased(){
       for(let i = 0; i<activeHexamino.length-1;i++){
         grid[activeHexamino[i]].col = activeColour
       } 
-    } else if(activeColour == "pink"){
+    } else if(activeColour == "#DA2C38"){
       activeHexamino[5] -= 42
 
       //true the old spot grey
@@ -82,7 +82,6 @@ function whatHexamino(){
   
   switch(nameOfActiveHexo){
       case "topHat":
-        console.log("test")
         topHatState();
       break;
       case "cross":
