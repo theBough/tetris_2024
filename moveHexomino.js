@@ -56,46 +56,15 @@ function keyReleased(){
     }
   }
   if(key === 'a'){
-    if(activeColour =="#226F54"){
-      //the Tophat
+    whatHexomino();
 
-      activeHexomino[2] -= 39
-      activeHexomino[5] += 18
-
-      //true the old spot grey
-      grid[activeHexomino[2]+39].col = 100
-      grid[activeHexomino[5]-18].col = 100
-      //colour new location of tetromino
-      for(let i = 0; i<activeHexomino.length-1;i++){
-        grid[activeHexomino[i]].col = activeColour
-      } 
-    } else if(activeColour == "#DA2C38"){
-      activeHexomino[5] -= 42
-
-      //true the old spot grey
-      grid[activeHexomino[5]+42].col = 100
-      //colour new location of tetromino
-      for(let i = 0; i<activeHexomino.length-1;i++){
-        grid[activeHexomino[i]].col = activeColour
-      } 
-    }
 
   }
    if(key === 'q'){
      
       whatHexomino();
-     /*
-      if(activeColour == "pink"){
-        activeTetromino[5] -= 38
 
-        //true the old spot grey
-        grid[activeTetromino[5]+38].col = 100
-        //colour new location of tetromino
-        for(let i = 0; i<activeTetromino.length;i++){
-          grid[activeTetromino[i]].col = activeColour
-        } 
-   }*/
-  }
+   }
 }
 
 function whatHexomino(){
