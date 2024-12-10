@@ -57,13 +57,9 @@ function keyReleased(){
   }
   if(key === 'a'){
     whatHexomino();
-
-
   }
    if(key === 'q'){
-     
-      whatHexomino();
-
+      whatHexomino()
    }
 }
 
@@ -75,6 +71,12 @@ function whatHexomino(){
       break;
       case "cross":
         crossState();
+      break;
+      case "rectangle":
+        rectangleState();
+      break;
+      case "stairCase":
+        stairCaseState();
       break;
   }//end of switch
 }//end of function
