@@ -11,6 +11,8 @@ function setup() {
   gravityOn()
   colourList.push("#DA2C38")
   colourList.push("#226F54")
+  colourList.push("yellow")
+  colourList.push("blue")
   
   let index = Math.trunc(random(0,colourList.length))
   activeColour = colourList[index]
@@ -20,6 +22,13 @@ function setup() {
   } else if(index == 1){
     makeTophat()
     nameOfActiveHexo = "topHat"
+  } else if(index == 2){
+    makeRectangle()
+    nameOfActiveHexo = "rectangle"
+  }else if(index == 3){
+    makeStairCase()
+    nameOfActiveHexo = "stairCase"
+    
   }
 }
 function draw() {
