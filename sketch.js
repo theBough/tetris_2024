@@ -14,7 +14,21 @@ function setup() {
   colourList.push("yellow")
   colourList.push("blue")
   
-  let index = Math.trunc(random(0,colourList.length))
+ newHexomino()
+}
+function draw() {
+  background(220);
+  for(let i=0 ; i<grid.length; i++){
+    grid[i].display()
+    
+  }
+ 
+  if(hitEdge){
+    clearInterval(myGravity);
+  }
+}
+function newHexomino(){
+   let index = Math.trunc(random(0,colourList.length))
   activeColour = colourList[index]
   if(index == 0){
     makeCross();
@@ -29,17 +43,6 @@ function setup() {
     makeStairCase()
     nameOfActiveHexo = "stairCase"
     
-  }
-}
-function draw() {
-  background(220);
-  for(let i=0 ; i<grid.length; i++){
-    grid[i].display()
-    
-  }
- 
-  if(hitEdge){
-    clearInterval(myGravity);
   }
 }
 function gravityOn(){
