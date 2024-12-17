@@ -1,9 +1,11 @@
+let newHexominoTime = false;
 function moveActiveHexomino(){
   
   for(let i = 0; i<activeHexomino.length-1;i++){
     activeHexomino[i] +=1
     if(activeHexomino[i] % 20 == 19){
-      hitEdge = true
+      //hitEdge = true
+      newHexominoTime = true
     }
     grid[activeHexomino[i]-1].col = 100
 
@@ -12,7 +14,10 @@ function moveActiveHexomino(){
     for(let i = 0; i<activeHexomino.length-1;i++){
       grid[activeHexomino[i]].col = activeColour
     }    
-
+    if(newHexominoTime){
+      newHexomino();
+      newHexominoTime = false
+    }
 }
 function keyReleased(){
   if(key === 'w'){
